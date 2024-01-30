@@ -4,99 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
             text-align: center;
-            padding: 1em;
+            margin: 50px;
         }
 
-        nav {
-            background-color: #555;
-            padding: 1em;
-            text-align: center;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 0.5em 1em;
-            margin: 0 1em;
-            border-radius: 5px;
-            background-color: #777;
-        }
-
-        nav a:hover {
-            background-color: #999;
-        }
-
-        main {
-            padding: 1em;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-
-        /* Media Queries for Responsive Layout */
-        @media only screen and (max-width: 600px) {
-            nav {
-                flex-direction: column;
-                text-align: left;
-            }
-
-            nav a {
-                margin: 0.3em 0;
-            }
-
-            footer {
-                position: relative;
-            }
+        #content {
+            display: none;
         }
     </style>
-    <title>Responsive HTML Page</title>
+    <script>
+        function login() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            // Replace these values with your actual username and password
+            var validUsername = "test";
+            var validPassword = "test";
+
+            if (username === validUsername && password === validPassword) {
+                document.getElementById("login-form").style.display = "none";
+                document.getElementById("content").style.display = "block";
+            } else {
+                alert("Invalid username or password. Please try again.");
+            }
+        }
+    </script>
 </head>
 
 <body>
 
-    <header>
-        <h1>Testing from mobile</h1>
-    </header>
+    <div id="login-form">
+        <h2>Login</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" required><br>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-    </nav>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br>
 
-    <main>
-        <h2>Welcome to our website!</h2>
-        <p>This is a simple example of a responsive HTML page.</p>
-        <img src="https://via.placeholder.com/800x400" alt="Responsive Image">
-    </main>
+            <button type="button" onclick="login()">Login</button>
+        </form>
+    </div>
 
-    <footer>
-        &copy; 2024 Your Company Name
-    </footer>
+    <div id="content">
+        <h2>Welcome to the Secret Page!</h2>
+        <p>This content is only visible after successful login.</p>
+    </div>
 
 </body>
 
