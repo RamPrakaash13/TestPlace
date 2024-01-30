@@ -4,16 +4,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
             text-align: center;
-            margin: 50px;
+            padding: 1em;
+        }
+
+        nav {
+            background-color: #555;
+            padding: 1em;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            margin: 0 1em;
+            border-radius: 5px;
+            background-color: #777;
+        }
+
+        nav a:hover {
+            background-color: #999;
+        }
+
+        main {
+            padding: 1em;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        #login-form {
+            text-align: center;
+            display: block;
         }
 
         #content {
             display: none;
+        }
+
+        /* Media Queries for Responsive Layout */
+        @media only screen and (max-width: 600px) {
+            nav {
+                flex-direction: column;
+                text-align: left;
+            }
+
+            nav a {
+                margin: 0.3em 0;
+            }
+
+            footer {
+                position: relative;
+            }
         }
     </style>
     <script>
@@ -33,27 +99,45 @@
             }
         }
     </script>
+    <title>Responsive HTML Page with Authentication</title>
 </head>
 
 <body>
 
-    <div id="login-form">
-        <h2>Login</h2>
-        <form>
-            <label for="username">Username:</label>
-            <input type="text" id="username" required><br>
+    <header>
+        <h1>Responsive HTML Page with Authentication</h1>
+    </header>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" required><br>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+    </nav>
 
-            <button type="button" onclick="login()">Login</button>
-        </form>
-    </div>
+    <main>
+        <div id="login-form">
+            <h2>Login</h2>
+            <form>
+                <label for="username">Username:</label>
+                <input type="text" id="username" required><br>
 
-    <div id="content">
-        <h2>Welcome to the Secret Page!</h2>
-        <p>This content is only visible after successful login.</p>
-    </div>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required><br>
+
+                <button type="button" onclick="login()">Login</button>
+            </form>
+        </div>
+
+        <div id="content">
+            <h2>Welcome to the Secret Page!</h2>
+            <p>This content is only visible after successful login.</p>
+            <img src="https://via.placeholder.com/800x400" alt="Responsive Image">
+        </div>
+    </main>
+
+    <footer>
+        &copy; 2024 Your Company Name
+    </footer>
 
 </body>
 
