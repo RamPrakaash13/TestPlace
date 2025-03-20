@@ -1,144 +1,173 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Writer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            color: #333;
         }
-
-        header {
-            background-color: #333;
-            color: #fff;
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            color: #333;
+        }
+        .header {
             text-align: center;
-            padding: 1em;
         }
-
-        nav {
-            background-color: #555;
-            padding: 1em;
+        .header img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            border: 3px solid #ff6f61;
+        }
+        .header h1 {
+            margin: 0;
+            color: #ff6f61;
+        }
+        .contact-info {
             text-align: center;
+            margin-top: 10px;
+            font-weight: bold;
         }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 0.5em 1em;
-            margin: 0 1em;
+        .section {
+            margin-top: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-left: 5px solid #ff6f61;
             border-radius: 5px;
-            background-color: #777;
         }
-
-        nav a:hover {
-            background-color: #999;
+        .section h2 {
+            color: #ff6f61;
         }
-
-        main {
-            padding: 1em;
+        .job, .project {
+            margin-top: 10px;
         }
-
-        img {
-            max-width: 100%;
-            height: auto;
+        .job h3, .job p, .project h3, .project p {
+            margin: 5px 0;
         }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1em;
-            position: fixed;
-            bottom: 0;
+        .achievements img, .work-samples img {
             width: 100%;
-        }
-
-        #login-form {
-            text-align: center;
+            max-width: 400px;
             display: block;
+            margin: 10px auto;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-
-        #content {
-            display: none;
+        .cta {
+            text-align: center;
+            margin-top: 30px;
         }
-
-        /* Media Queries for Responsive Layout */
-        @media only screen and (max-width: 600px) {
-            nav {
-                flex-direction: column;
-                text-align: left;
+        .cta a {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #ff6f61;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px;
+                padding: 15px;
             }
-
-            nav a {
-                margin: 0.3em 0;
+            .header h1 {
+                font-size: 24px;
             }
-
-            footer {
-                position: relative;
+            .contact-info {
+                font-size: 14px;
             }
         }
     </style>
-    <script>
-        function login() {
-            var username = document.getElementById("username").value;
-            var password = document.getElementById("password").value;
-
-            // Replace these values with your actual username and password
-            var validUsername = "test";
-            var validPassword = "test";
-
-            if (username === validUsername && password === validPassword) {
-                document.getElementById("login-form").style.display = "none";
-                document.getElementById("content").style.display = "block";
-            } else {
-                alert("Invalid username or password. Please try again.");
-            }
-        }
-    </script>
-    <title>Responsive HTML Page with Authentication</title>
 </head>
-
 <body>
-
-    <header>
-        <h1>Responsive HTML Page with Authentication</h1>
-    </header>
-
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-    </nav>
-
-    <main>
-        <div id="login-form">
-            <h2>Login</h2>
-            <form>
-                <label for="username">Username:</label>
-                <input type="text" id="username" required><br>
-
-                <label for="password">Password:</label>
-                <input type="password" id="password" required><br>
-
-                <button type="button" onclick="login()">Login</button>
-            </form>
+    <div class="container">
+        <div class="header">
+            <img src="https://drive.google.com/file/d/18NNv51kiVMDY1skrUe6pQFSUMXnoP1_D/view?usp=sharing" alt="Profile GIF">
+            <h1>NARAYANI S</h1>
+            <p>Content Writer | Storyteller | SEO Specialist</p>
         </div>
-
-        <div id="content">
-            <h2>Welcome to the Secret Page!</h2>
-            <p>This content is only visible after successful login.</p>
-            <img src="https://via.placeholder.com/800x400" alt="Responsive Image">
+        <div class="contact-info">
+            <p>Email: narayani.sri2000@gmail.com | Phone: 9566586576</p>
+            <p>LinkedIn: linkedin.com/in/Narayani S | Portfolio: yourwebsite.com</p>
         </div>
-    </main>
-
-    <footer>
-        &copy; 2024 Your Company Name
-    </footer>
-
+        <div class="section">
+            <h2>About Me</h2>
+            <p>A writer who turns brain-bending topics into easy-to-read stories that make people actually want to keep reading, all
+                while throwing in a dash of humor.</p>
+        </div>
+        <div class="section">
+            <h2>Experience</h2>
+            <div class="job">
+                <h3>Junior Content Writer - Backspace Tech India Private Limited, Chennai</h3>
+                <p>May 2023 - Present</p>
+                <ul>
+                    <li>Assisted in building the marketing team from scratch and gained hands-on experience in establishing content
+                        strategies.</li>
+                    <li>Created and managed both short and long-form content across various formats, including carousels, threads,
+                        blogs, videos, etc.</li>
+                    <li>Co-authored the first-ever comic book in the FinTech industry.</li>
+                    <li>Conceptualized and executed product, promotional, and culture videos to enhance brand engagement across
+                        different platforms.</li>
+                    <li>Developed website content and collaborated on design to ensure a seamless user experience.</li>
+                    <li>Represented the organization in the Global forum through Global Fintech Fest (GFF) and engaged with different
+                        indian and international payment, fintech, and banking personas.</li>
+                    <li>Worked closely with graphic designers, strengthening my ability to visualize and align content with compelling
+                        visuals.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="section">
+            <h2>Portfolio & Work Samples</h2>
+            <p>Some of my best writing pieces:</p>
+            <img src="https://media.giphy.com/media/gj0QdZ9FgqGhOBNlFS/giphy.gif?cid=790b7611rtxsnxavopouhx4nwgwpfwq326sjp6qz4px7jvcv&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Writing Sample 1">
+            <img src="https://media.giphy.com/media/1d7F9xyq6j7C1ojbC5/giphy.gif?cid=ecf05e475bo2jns9oehnitkotrnntifx4z7u4e9akb10yp4a&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Writing Sample 2">
+            <img src="https://media.giphy.com/media/LLx3PCNiEidsNQ58Wj/giphy.gif?cid=ecf05e47clxx9k1z3wsnzgbytog8khkwrix3t41a788covc5&ep=v1_gifs_search&rid=giphy.gif&ct=g" alt="Writing Sample 3">
+        </div>
+        <div class="section">
+            <h2>Skills</h2>
+            <ul>
+                <li>SEO Writing & Keyword Research</li>
+                <li>Copywriting & Blogging</li>
+                <li>Social Media Content Creation</li>
+                <li>Editing & Proofreading</li>
+            </ul>
+        </div>
+        <div class="section achievements">
+            <h2>Achievements</h2>
+            <ul>
+                <li>Content Writing</li>
+                <li>Content Development</li>
+                <li>Content Editing</li>
+                <li>Content Strategy</li>
+                <li>Content Marketing</li>
+                <li>Blogging</li>
+                <li>Meme Marketing</li>
+                <li>Copywriting</li>
+                <li>Design Thinking</li>
+                <li>Script Writing</li>
+                <li>Branding</li>
+                <li>Social Media Management</li>
+                <li>Canva</li>
+            </ul>
+            <img src="achievement1.jpg" alt="Achievement 1">
+            <img src="achievement2.jpg" alt="Achievement 2">
+        </div>
+        <div class="cta">
+            <a href="mailto:narayani.sri2000@gmail.com">Contact Me</a>
+        </div>
+    </div>
 </body>
-
 </html>
